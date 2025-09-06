@@ -25,52 +25,62 @@ LICENSE
    git clone https://github.com/yourusername/Efficient-Portfolio-Optimizer.git
    cd Efficient-Portfolio-Optimizer
 
-Virtual env:
+2. **Virtual env**:
 
 python -m venv venv
 .\venv\Scripts\activate
 
-Install:
+3. **Install**:
 
 pip install -r requirements.txt
 
-Set .env:
+4. **Set .env**:
 
 copy .env.example .env
 
-Edit .env:env
+5. **Edit .env**:env
 
 KITE_API_KEY=your_api_key
 
 Get key from Kite Developer.
 
-Get token.txt:
+6. **Get token.txt**:
 
 from kiteconnect import KiteConnect
+
 from dotenv import load_dotenv
+
 import os
+
 load_dotenv()
+
 kite = KiteConnect(api_key=os.getenv("KITE_API_KEY"))
+
 print(kite.login_url())  # Open, log in, get request_token
+
 data = kite.generate_session("your_request_token", api_secret="your_api_secret")
-with open("token.txt", "w") as f:
-    f.write(data["access_token"])
+
+with open("token.txt", "w") as f: f.write(data["access_token"])
     
-Run
+7. **Run**
 
 python app.py
 
 Open http://localhost:5000.
 
-#Usage
+## Usage
 
 Select 2+ stocks
+
 Choose strategy
+
 Click "Analyze" for results and charts
 
-#Security
+## Security
 
 .env, token.txt ignored by .gitignore
+
 Use own Kite API key/secret
+
 Revoke leaked keys at Kite Developer
 
