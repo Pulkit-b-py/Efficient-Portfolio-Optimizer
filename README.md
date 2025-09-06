@@ -1,61 +1,41 @@
 # Efficient-Portfolio-Optimizer
-This project is a Flask web application for building and analyzing efficient investment portfolios. It integrates with market data, uses optimization techniques, and provides interactive visualizations for portfolio performance.
+A simple Flask app to optimize investment portfolios using Python.
 
-🚀 Features
-
-Portfolio optimization based on Modern Portfolio Theory
-
-Interactive web interface (built with Flask)
-
-Data handling with Pandas and NumPy
-
-Integration with Kite Connect API (Zerodha)
-
-Secure API key management using .env
-
-Ready for deployment on any Python environment
-
-🛠️ Installation
-1. Clone the repository
+🚀 Setup & Run
+1. Clone the project
 git clone https://github.com/your-username/efficient-portfolio.git
 cd efficient-portfolio
 
-2. Create a virtual environment
+2. Create virtual environment
 python -m venv venv
-source venv/bin/activate   # On Linux/Mac
-venv\Scripts\activate      # On Windows
+venv\Scripts\activate     # Windows  
+source venv/bin/activate  # Mac/Linux
 
-3. Install dependencies
+3. Install requirements
 pip install -r requirements.txt
 
-🔑 Setup Environment Variables
+4. Add your API key
 
-Create a .env file in the root folder:
+Create a .env file in the project root:
 
-API_KEY=your_kiteconnect_api_key
+API_KEY=your_api_key_here
 
 
-👉 Never upload your .env file to GitHub!
-Instead, share .env.example to show required variables.
+(👉 .env is already in .gitignore, so your key stays hidden.)
 
-▶️ Run the Application
+5. Run the app
 python app.py
 
 
-The app will start at:
+Then open:
+👉 http://127.0.0.1:5000 in your browser
 
-http://127.0.0.1:5000
+📂 Main Files
 
-📂 Project Structure
-Efficient Portfolio/
-│── app.py               # Flask application
-│── requirements.txt     # Project dependencies
-│── README.md            # Project documentation
-│── .gitignore           # Ignored files (env, venv, etc.)
-│── .env.example         # Template for environment variables
-│── templates/           # HTML templates
-│── venv/                # Virtual environment (ignored in Git)
+app.py → Flask app
 
-📜 License
+requirements.txt → dependencies
 
-This project is licensed under the MIT License – feel free to use and modify it.
+.env → your API key (not uploaded to GitHub)
+
+templates/ → web pages
