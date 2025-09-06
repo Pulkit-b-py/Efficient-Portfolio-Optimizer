@@ -1,0 +1,60 @@
+# Python-specific files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyd
+*.pyo
+
+# Sensitive data
+.env
+token.txt
+*.env
+*.key
+*.secret
+*.token
+
+# Virtual environments
+venv/
+.env/
+*.venv
+env/
+.venv/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.cache
+*.bak
+*.swp
+*~
+
+# Dependency directories
+node_modules/
+dist/
+build/
+
+# Jupyter notebooks (if used for testing)
+*.ipynb
+*.ipynb_checkpoints/
+
+# Testing and coverage reports
+.coverage
+coverage.xml
+*.cover
+*.pytest_cache/
+
+# Local testing or temporary data
+*.csv
+*.json
+*.sqlite
+*.db
